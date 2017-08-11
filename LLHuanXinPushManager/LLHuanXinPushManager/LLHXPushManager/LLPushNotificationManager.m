@@ -39,10 +39,13 @@
     
     //AppKey:注册的AppKey，详细见下面注释。
     //apnsCertName:推送证书名（不需要加后缀），详细见下面注释。
-    EMOptions *options = [EMOptions optionsWithAppkey:@"1181170803178337#testdemo"];
+    EMOptions *options = [EMOptions optionsWithAppkey:@"环信应用标识"];
     
-    options.apnsCertName = @"testFlight2_dev";//testFlight2_service, testFlight2_dev
-//    options.apnsCertName = @"shanghutong_Service";//testFlight2_service, testFlight2_dev
+#if DEBUG
+    options.apnsCertName = @"自己上传到环信后台的推送证书名称";
+#else
+    options.apnsCertName = @"自己上传到环信后台的推送证书名称";
+#endif
     
     
     [[EMClient sharedClient] initializeSDKWithOptions:options];
