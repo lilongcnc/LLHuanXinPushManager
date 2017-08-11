@@ -15,8 +15,7 @@
 > - UITabBarController+UINavigationController模式, 点击推送消息跳转到执行页面。 当处于指定页面时，再次点击推送消息执行自定义逻辑。
 > - 我的项目中，并没有给通知弾框增加Action和附件支持,如果需要的话，可以在下边的**参考**小节中参考另一个demo。
 
-![效果图](http://upload-images.jianshu.io/upload_images/594219-57f10fac0a60e33d.gif?imageMogr2/auto-orient/strip)
-
+![](https://github.com/lilongcnc/LLHuanXinPushManager/blob/master/ScreenShot/screen.gif)
 
 ###运行demo
 1. `LLPushNotificationManager.m`中指定环信应用标识：
