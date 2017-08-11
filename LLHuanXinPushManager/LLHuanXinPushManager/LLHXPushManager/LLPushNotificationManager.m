@@ -224,15 +224,13 @@
     [WSProgressHUD showSuccessWithStatus:@"收到环信通知"];
     NSLog(@"---------------------------------------------------------------------------------->messagesDidReceive: 收到环信通知");
     
+//********** 模拟数据
     NSDictionary *dict = @{
                            @"Content" : @{
                                    @"Msg" : @{
                                            @"Type" : @"txt",
                                            @"ObjType" : @"1",
                                            @"Obj" : @{
-                                                   @"Status" : @"4",
-                                                   @"Code" : @"30",
-                                                   @"Money" : @"0",
                                                    @"OName" : @"线下商城",
                                                    @"OID" : @"07101F800001",
                                                    @"EntryTime" : @"2017-07-14 16:03:38.38",
@@ -244,7 +242,8 @@
                                    },
                            @"ReceiverType" : @"1"
                            };
-    
+//**********
+   
     
     for (EMMessage *message in aMessages) {
         //赋值模拟数据
