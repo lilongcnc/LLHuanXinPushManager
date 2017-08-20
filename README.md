@@ -18,6 +18,8 @@
 ![](https://github.com/lilongcnc/LLHuanXinPushManager/blob/master/ScreenShot/screen.gif)
 
 ###运行demo
+
+0. 初次使用开启`debugEnabled`
 1. `LLPushNotificationManager.m`中指定环信应用标识：
    
          EMOptions *options = [EMOptions optionsWithAppkey:@"环信应用标识"];
