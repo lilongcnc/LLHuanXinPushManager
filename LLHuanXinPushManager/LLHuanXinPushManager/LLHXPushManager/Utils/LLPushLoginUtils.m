@@ -9,6 +9,7 @@
 #import "LLPushLoginUtils.h"
 #import <UIKit/UIKit.h>
 #import "LLTools+Vertify.h"
+#import "LLPushNotificationPrivate.h"
 
 
 void TTAlertNoTitle(NSString* message) {
@@ -99,11 +100,11 @@ void TTAlertNoTitle(NSString* message) {
                      password:(NSString *)password
 {
     if ([LLTools ll_isEmptyOrNil:userName]) {
-        NSLog(@"输入的环信用户名为空");
+        LLLog(@"🐳🐳🐳🐳🐳🐳🐳 -%s- 输入的环信用户名为空",__func__);
         return ;
     }
     if ([LLTools ll_isEmptyOrNil:password]) {
-        NSLog(@"输入的环信注册密码为空");
+        LLLog(@"🐳🐳🐳🐳🐳🐳🐳 -%s- 输入的环信注册密码为空",__func__);
         return ;
     }
 }
@@ -112,7 +113,6 @@ void TTAlertNoTitle(NSString* message) {
 + (void)ll_signOutComplete:(XuanXinSignOutCompleteBlock)complete {
     [[EMClient sharedClient] logout:YES completion:^(EMError *aError) {
         if (!aError) {
-            NSLog(@"退出成功");
             !complete ? :complete(nil);
         }
         else

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		891C91D71F488C250016C2EF /* AppDelegate+LLHuanxinPushRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 891C91D61F488C250016C2EF /* AppDelegate+LLHuanxinPushRegister.m */; };
+		891C91D81F488C250016C2EF /* AppDelegate+LLHuanxinPushRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 891C91D61F488C250016C2EF /* AppDelegate+LLHuanxinPushRegister.m */; };
+		891C91D91F488C250016C2EF /* AppDelegate+LLHuanxinPushRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 891C91D61F488C250016C2EF /* AppDelegate+LLHuanxinPushRegister.m */; };
+		895B45F21F4932F400AA3366 /* LLPushNotificationPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 895B45F11F4932F400AA3366 /* LLPushNotificationPrivate.m */; };
+		895B45F31F4932F400AA3366 /* LLPushNotificationPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 895B45F11F4932F400AA3366 /* LLPushNotificationPrivate.m */; };
+		895B45F41F4932F400AA3366 /* LLPushNotificationPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 895B45F11F4932F400AA3366 /* LLPushNotificationPrivate.m */; };
 		898D79141F3DE4F6003EE6F1 /* EaseUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 898D77ED1F3DE4F6003EE6F1 /* EaseUI.m */; };
 		898D79151F3DE4F6003EE6F1 /* EaseUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 898D77ED1F3DE4F6003EE6F1 /* EaseUI.m */; };
 		898D79161F3DE4F6003EE6F1 /* EaseUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 898D77ED1F3DE4F6003EE6F1 /* EaseUI.m */; };
@@ -500,6 +506,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		891C91D51F488C250016C2EF /* AppDelegate+LLHuanxinPushRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+LLHuanxinPushRegister.h"; sourceTree = "<group>"; };
+		891C91D61F488C250016C2EF /* AppDelegate+LLHuanxinPushRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+LLHuanxinPushRegister.m"; sourceTree = "<group>"; };
+		895B45F01F4932F400AA3366 /* LLPushNotificationPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLPushNotificationPrivate.h; sourceTree = "<group>"; };
+		895B45F11F4932F400AA3366 /* LLPushNotificationPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLPushNotificationPrivate.m; sourceTree = "<group>"; };
 		898D77EB1F3DE4F6003EE6F1 /* EaseUI-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EaseUI-Prefix.pch"; sourceTree = "<group>"; };
 		898D77EC1F3DE4F6003EE6F1 /* EaseUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EaseUI.h; sourceTree = "<group>"; };
 		898D77ED1F3DE4F6003EE6F1 /* EaseUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaseUI.m; sourceTree = "<group>"; };
@@ -756,7 +766,6 @@
 		898D790F1F3DE4F6003EE6F1 /* EaseConversationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaseConversationCell.m; sourceTree = "<group>"; };
 		898D79111F3DE4F6003EE6F1 /* EaseUIResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EaseUIResource.bundle; sourceTree = "<group>"; };
 		898D79131F3DE4F6003EE6F1 /* HyphenateLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HyphenateLite.framework; sourceTree = "<group>"; };
-		898D7A831F3DE57E003EE6F1 /* LLPushNotificationConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLPushNotificationConst.h; sourceTree = "<group>"; };
 		898D7A841F3DE57E003EE6F1 /* LLPushNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLPushNotificationManager.h; sourceTree = "<group>"; };
 		898D7A851F3DE57E003EE6F1 /* LLPushNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLPushNotificationManager.m; sourceTree = "<group>"; };
 		898D7A871F3DE57E003EE6F1 /* LLPushLoginUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLPushLoginUtils.h; sourceTree = "<group>"; };
@@ -1482,7 +1491,8 @@
 		898D7A821F3DE57E003EE6F1 /* Const */ = {
 			isa = PBXGroup;
 			children = (
-				898D7A831F3DE57E003EE6F1 /* LLPushNotificationConst.h */,
+				895B45F01F4932F400AA3366 /* LLPushNotificationPrivate.h */,
+				895B45F11F4932F400AA3366 /* LLPushNotificationPrivate.m */,
 			);
 			path = Const;
 			sourceTree = "<group>";
@@ -1496,6 +1506,8 @@
 				898D7A8A1F3DE57E003EE6F1 /* LLPushNotificationUtils.m */,
 				898D7A8B1F3DE57E003EE6F1 /* LLSystemPlayUtils.h */,
 				898D7A8C1F3DE57E003EE6F1 /* LLSystemPlayUtils.m */,
+				891C91D51F488C250016C2EF /* AppDelegate+LLHuanxinPushRegister.h */,
+				891C91D61F488C250016C2EF /* AppDelegate+LLHuanxinPushRegister.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1846,6 +1858,7 @@
 				898D799E1F3DE4F7003EE6F1 /* EMSDWebImageDecoder.m in Sources */,
 				898D7A3D1F3DE4F7003EE6F1 /* EaseCustomMessageCell.m in Sources */,
 				898D7A1F1F3DE4F7003EE6F1 /* EaseEmotionManager.m in Sources */,
+				895B45F21F4932F400AA3366 /* LLPushNotificationPrivate.m in Sources */,
 				898D79681F3DE4F6003EE6F1 /* MJRefreshNormalHeader.m in Sources */,
 				898D79E31F3DE4F7003EE6F1 /* PSTGridLayoutInfo.m in Sources */,
 				898D79DA1F3DE4F7003EE6F1 /* PSTCollectionViewItemKey.m in Sources */,
@@ -1885,6 +1898,7 @@
 				898D79591F3DE4F6003EE6F1 /* MJRefreshAutoStateFooter.m in Sources */,
 				898D791D1F3DE4F6003EE6F1 /* EMAudioRecorderUtil.m in Sources */,
 				898D79AD1F3DE4F7003EE6F1 /* MKAnnotationView+EMWebCache.m in Sources */,
+				891C91D71F488C250016C2EF /* AppDelegate+LLHuanxinPushRegister.m in Sources */,
 				898D797D1F3DE4F6003EE6F1 /* MWCaptionView.m in Sources */,
 				898D7A761F3DE4F7003EE6F1 /* EaseConversationCell.m in Sources */,
 				898D7A3A1F3DE4F7003EE6F1 /* EaseBaseMessageCell.m in Sources */,
@@ -1991,6 +2005,7 @@
 				898D799F1F3DE4F7003EE6F1 /* EMSDWebImageDecoder.m in Sources */,
 				898D7A3E1F3DE4F7003EE6F1 /* EaseCustomMessageCell.m in Sources */,
 				898D7A201F3DE4F7003EE6F1 /* EaseEmotionManager.m in Sources */,
+				895B45F31F4932F400AA3366 /* LLPushNotificationPrivate.m in Sources */,
 				898D79691F3DE4F6003EE6F1 /* MJRefreshNormalHeader.m in Sources */,
 				898D79E41F3DE4F7003EE6F1 /* PSTGridLayoutInfo.m in Sources */,
 				898D79DB1F3DE4F7003EE6F1 /* PSTCollectionViewItemKey.m in Sources */,
@@ -2030,6 +2045,7 @@
 				898D795A1F3DE4F6003EE6F1 /* MJRefreshAutoStateFooter.m in Sources */,
 				898D791E1F3DE4F6003EE6F1 /* EMAudioRecorderUtil.m in Sources */,
 				898D79AE1F3DE4F7003EE6F1 /* MKAnnotationView+EMWebCache.m in Sources */,
+				891C91D81F488C250016C2EF /* AppDelegate+LLHuanxinPushRegister.m in Sources */,
 				898D797E1F3DE4F6003EE6F1 /* MWCaptionView.m in Sources */,
 				898D7A771F3DE4F7003EE6F1 /* EaseConversationCell.m in Sources */,
 				898D7A3B1F3DE4F7003EE6F1 /* EaseBaseMessageCell.m in Sources */,
@@ -2136,6 +2152,7 @@
 				898D79A01F3DE4F7003EE6F1 /* EMSDWebImageDecoder.m in Sources */,
 				898D7A3F1F3DE4F7003EE6F1 /* EaseCustomMessageCell.m in Sources */,
 				898D7A211F3DE4F7003EE6F1 /* EaseEmotionManager.m in Sources */,
+				895B45F41F4932F400AA3366 /* LLPushNotificationPrivate.m in Sources */,
 				898D796A1F3DE4F6003EE6F1 /* MJRefreshNormalHeader.m in Sources */,
 				898D79E51F3DE4F7003EE6F1 /* PSTGridLayoutInfo.m in Sources */,
 				898D79DC1F3DE4F7003EE6F1 /* PSTCollectionViewItemKey.m in Sources */,
@@ -2175,6 +2192,7 @@
 				898D795B1F3DE4F6003EE6F1 /* MJRefreshAutoStateFooter.m in Sources */,
 				898D791F1F3DE4F6003EE6F1 /* EMAudioRecorderUtil.m in Sources */,
 				898D79AF1F3DE4F7003EE6F1 /* MKAnnotationView+EMWebCache.m in Sources */,
+				891C91D91F488C250016C2EF /* AppDelegate+LLHuanxinPushRegister.m in Sources */,
 				898D797F1F3DE4F6003EE6F1 /* MWCaptionView.m in Sources */,
 				898D7A781F3DE4F7003EE6F1 /* EaseConversationCell.m in Sources */,
 				898D7A3C1F3DE4F7003EE6F1 /* EaseBaseMessageCell.m in Sources */,
