@@ -8,7 +8,7 @@
  环信推送封装, 完整包括了APNS 推送, 应用在前台推送, 应用在后台时推送.  iOS10- 和 iOS10+ 均显示推送弹框!
 
 
-###封装效果
+## 封装效果
 > - 适配iOS8~iOS10和iOS10+
 > - 环信登录、注销、自动登录等
 > - 使用EBForeNotification，当应用在前台时，iOS8-iOS10也显示推送弾框。
@@ -17,7 +17,7 @@
 
 ![](https://github.com/lilongcnc/LLHuanXinPushManager/blob/master/ScreenShot/screen.gif)
 
-###运行demo
+## 运行demo
 
 0. 初次使用开启`debugEnabled`
 1. `LLPushNotificationManager.m`中指定环信应用标识：
@@ -38,7 +38,7 @@
         
 4. 首次进入应用，需要`账户`页面，点击登录。和应用的正常使用逻辑相同。关于环信的自动登录接口定义，在环信API中可查。
 
-###接入项目
+## 接入项目
 
 
 `LLPushNotificationManager.m`中FIXME 指明了需要替换的文件名称和业务逻.
