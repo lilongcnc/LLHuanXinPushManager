@@ -37,3 +37,9 @@
         ll_huanxinLoginWithName:@"lisi" password:@"123456"
         
 4. 首次进入应用，需要`账户`页面，点击登录。和应用的正常使用逻辑相同。关于环信的自动登录接口定义，在环信API中可查。
+
+###接入项目
+`LLPushNotificationManager.m`中FIXME 指明了需要替换的文件名称和业务逻.
+
+
+
