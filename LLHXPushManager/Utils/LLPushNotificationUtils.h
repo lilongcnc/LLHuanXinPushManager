@@ -15,7 +15,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "LLPushNotificationConst.h"
+#import "LLPushNotificationPrivate.h"
 #import <UserNotifications/UserNotifications.h>
 #import "EaseUI.h"
 

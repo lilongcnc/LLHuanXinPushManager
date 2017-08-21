@@ -74,11 +74,10 @@ NSString * const LLLocalPushNotificationMessageErrorDomain = @"LLLocalPushNotifi
                           completionHandler:^(BOOL granted, NSError * _Nullable error) {
                               if (granted) {
                                   //用户点击允许
-                                  NSLog(@"iOS10 注册通知成功");
+                                  LLLog(@"🐳🐳🐳🐳🐳🐳🐳 -%s- 注册通知成功",__func__);
                                   
                                   //获取当前的通知设置
                                   [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
-                                      //                                      NSLog(@"%@", settings);
                                   }];
                                   
                                   
@@ -93,7 +92,7 @@ NSString * const LLLocalPushNotificationMessageErrorDomain = @"LLLocalPushNotifi
                                   
                               } else {
                                   //用户点击不允许
-                                  NSLog(@"iOS10 注册通知失败");
+                                  LLLog(@"🐳🐳🐳🐳🐳🐳🐳 -%s- iOS10 注册通知失败",__func__);
                               }
                           }];
 }
@@ -196,7 +195,7 @@ NSString * const LLLocalPushNotificationMessageErrorDomain = @"LLLocalPushNotifi
     //发送推送
     UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:@"Test" content:nContent trigger:trigger];
     [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
-        NSLog(@"iOS 10 发送推送， error：%@", error);
+        LLLog(@"🐳🐳🐳🐳🐳🐳🐳 -%s- iOS 10 发送推送， error：%@", __func__,error);
         !completeblock? : completeblock(error);
     }];
 }

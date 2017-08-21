@@ -35,9 +35,17 @@
 @property (nonatomic,assign) BOOL debugEnabled;
 
 
-//注册和登录接口已经内部处理,不推荐外部调用
--(void)ll_huanxinUserloginOut LLDeprecated("不推荐外部调用此方法,内部已经处理");
--(void)ll_huanxinUserlogin LLDeprecated("不推荐外部调用此方法,内部已经处理");
+
+/**
+ 在 app 退出登录的时候调用
+ */
+-(void)ll_huanxinUserloginOut;
+
+
+/**
+ 在 app 登录的时候调用
+ */
+-(void)ll_huanxinUserlogin;
 
 
 @end
