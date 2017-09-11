@@ -193,7 +193,10 @@ NSString * const LLLocalPushNotificationMessageErrorDomain = @"LLLocalPushNotifi
     UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:0.01 repeats:NO];
     
     //发送推送
-    UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:@"Test" content:nContent trigger:trigger];
+#error 这个标识很重要,如果唯一不变的话,那么我们在通知中心和锁屏状态下,通知栏只显示一条推送, 后收到的推送把前一条推送顶掉.  变化的话,不会被挤掉.
+    NSString *requestIdentifier = [NSString stringWithFormat:@"requestIdentifier_%d",arc4random_uniform(1000)];
+    
+    UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:requestIdentifier content:nContent trigger:trigger];
     [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
         LLLog(@"🐳🐳🐳🐳🐳🐳🐳 -%s- iOS 10 发送推送， error：%@", __func__,error);
         !completeblock? : completeblock(error);

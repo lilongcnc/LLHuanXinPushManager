@@ -10,9 +10,14 @@
 #import <Foundation/Foundation.h>
 #import "LLPushNotificationUtils.h"
 #import "LLPushNotificationPrivate.h"
-
 @class CustomerTabBarController;
 
+
+typedef void (^ll_huanxinUserloginSuccess) ();
+typedef void (^ll_huanxinUserloginFailure) ();
+
+typedef void (^ll_huanxinUserloginOutSuccess) ();
+typedef void (^ll_huanxinUserloginOutFailure) ();
 @interface LLPushNotificationManager : NSObject
 
 @property (nonatomic,strong) CustomerTabBarController *customerBarVC;
@@ -47,5 +52,8 @@
  */
 -(void)ll_huanxinUserlogin;
 
+
+-(void)ll_huanxinUserloginSuccess:(ll_huanxinUserloginSuccess)success failure:(ll_huanxinUserloginFailure)failure;
+-(void)ll_huanxinUserloginOutSuccess:(ll_huanxinUserloginOutSuccess)success failure:(ll_huanxinUserloginOutFailure)failure;
 
 @end

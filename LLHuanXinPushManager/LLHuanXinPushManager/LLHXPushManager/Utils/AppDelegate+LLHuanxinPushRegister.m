@@ -107,6 +107,8 @@
 // 注册推送对象
 - (void)regisPushPresenter:(UIApplication *)application{
     self.pushNotificationManager = [LLPushNotificationManager new];
+    //FIXME:开启log打印!!!
+//    self.pushNotificationManager.debugEnabled = YES;
     [self.pushNotificationManager  ll_registerLocalNotification];
     
 }
