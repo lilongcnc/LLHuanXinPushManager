@@ -1,6 +1,6 @@
 
 
-配文地址: [《31- 最新环信推送封装 v3.0》](http://www.jianshu.com/p/1eacd5db0299)
+请先阅读配文: [《31- 最新环信推送封装 v3.0》](http://www.jianshu.com/p/1eacd5db0299),  比下边的描述更加详细!
 
 
 
@@ -14,6 +14,7 @@
 > - 使用EBForeNotification，当应用在前台时，iOS8-iOS10也显示推送弾框。
 > - UITabBarController+UINavigationController模式, 点击推送消息跳转到执行页面。 当处于指定页面时，再次点击推送消息执行自定义逻辑。
 > - 我的项目中，并没有给通知弾框增加Action和附件支持,如果需要的话，可以在下边的**参考**小节中参考另一个demo。
+> - 解决了 发了很多推送，App也收到了推送，但是通知栏却只显示最后一条推送 问题
 
 ![](https://github.com/lilongcnc/LLHuanXinPushManager/blob/master/ScreenShot/screen.gif)
 
