@@ -42,7 +42,8 @@
     //登录
     NSLog(@"APP登录");
     AppDelegate *delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
-    [delegate.pushNotificationManager ll_huanxinUserlogin];
+#error 登录成功之后,需要调用`ll_registerLocalNotification`方法注册完整通知!否则首次安装应用,首次登录会接收不到推送消息!
+    [delegate.pushNotificationManager ll_registerLocalNotification];
 }
 
 

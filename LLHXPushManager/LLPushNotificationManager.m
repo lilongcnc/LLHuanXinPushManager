@@ -26,11 +26,19 @@
 
 @interface LLPushNotificationManager ()<EMChatManagerDelegate,EMClientDelegate>
 
+
+@property (nonatomic,copy) ll_huanxinUserloginSuccess myLoginSuccess;
+@property (nonatomic,copy) ll_huanxinUserloginFailure myLoginFailure;
+
+@property (nonatomic,copy) ll_huanxinUserloginOutSuccess myLoginOutSuccess;
+@property (nonatomic,copy) ll_huanxinUserloginOutFailure myLoginOutFailure;
+
 @end
 
 @implementation LLPushNotificationManager
 
-//FIXME:这里添加环信 appKey和证书名称!!!
+
+#error 这里添加环信 appKey和证书名称!!!
 static NSString * const huanxinAppKey = @"环信应用标识";
 static NSString * const apnsCertName_Dev = @"自己上传到环信后台的推送证书名称";
 static NSString * const apnsCertName_Dis = @"自己上传到环信后台的推送证书名称";
@@ -42,8 +50,6 @@ static NSString * const apnsCertName_Dis = @"自己上传到环信后台的推�
 //----------------------------------------------------------------------------------------------------------
 - (void)ll_registerLocalNotification
 {
-    
-    self.debugEnabled = NO;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eBBannerViewDidClick:) name:EBBannerViewDidClick object:nil];
     
@@ -129,10 +135,11 @@ static NSString * const apnsCertName_Dis = @"自己上传到环信后台的推�
  */
 - (void)userAccountDidRemoveFromServer
 {
+#error 这里可以利用做当用户帐号在其他设备登录, 强制本用户退出登录!!!,弹个框提示用户就可以了. 强制退出的时候, 注意先把用户下线
+
     LLLog(@"🐳🐳🐳🐳🐳🐳🐳 -%s- 当前登录账号已经被从服务器端删除时会收到该回调",__func__);
     [self _huanxinUserloginOut];
     [self removeDelegate];
-    
 }
 
 
@@ -184,7 +191,7 @@ static NSString * const apnsCertName_Dis = @"自己上传到环信后台的推�
 
 
 
-
+#运行demo时注释掉本行代码, 但是实际项目中换成你自己的跳转逻辑
 - (void)jumpToTransactionRecordHomeView
 {
     
@@ -230,6 +237,7 @@ static NSString * const apnsCertName_Dis = @"自己上传到环信后台的推�
     [WSProgressHUD showSuccessWithStatus:@"收到环信通知"];
     LLLog(@"🐳🐳🐳🐳🐳🐳🐳 -%s---------->messagesDidReceive: 收到环信通知",__func__);
     
+#运行demo时注释掉本行代码, 但是这部分是模拟数据,仅供测试时候使用. 实际项目中需要注释掉这部分代码和message.ext = dict;
     //FIXME:模拟数据!!!
     NSDictionary *dict = @{
                            @"Content" : @{
@@ -281,7 +289,8 @@ static NSString * const apnsCertName_Dis = @"自己上传到环信后台的推�
     switch (state) {
         case UIApplicationStateActive:
         {
-            //FIXME:发送自定义前台通知,EBForeNotification的消息格式是有规范的, 另外内部自定义了通知音效和应用图标,如果需要应用图标,名为:AppIcon60x60,AppIcon80x80!!!
+            #运行demo时注释掉本行代码, 但是实际项目中,这里拼接所需要的内容
+            //FIXME:发送自定义前台通知,EBForeNotification的消息格式是有规范的, 另外EBForeNotification内部自定义了通知音效和应用图标,如果需要应用图标,名为:AppIcon60x60,AppIcon80x80!!!
             [EBForeNotification handleRemoteNotification:@{@"aps":@{@"alert":@"假如爱情可以解释，誓言可以修改，假如你我的相遇，可以重新安排.那么，生活就会比较容易.假如，有一天 　　我终于能将你忘记.然而，这不是随便传说的故事.也不是明天才要上演的戏剧.我无法找出原稿然后将你一笔抹去."}, @"key1":@"value1", @"key2":@"value2"} soundID:1312];
             
             [self modifyBadgeNumberByIncrease:NO];
@@ -315,7 +324,7 @@ static NSString * const apnsCertName_Dis = @"自己上传到环信后台的推�
                 EMTextMessageBody *textBody = (EMTextMessageBody *)messageBody;
                 alertBody = textBody.text;
                 LLLog(@"🐳🐳🐳🐳🐳🐳🐳 -%s- 收到的文字是 alertBody -- %@",__func__,alertBody);
-                
+                #error 运行demo时注释掉本行代码, 但是实际项目中,按照公司后台的格式提取数据
                 //FIXME:取出通知数据,这里需要根据自己后台返回的数据和业务员需求对应处理!!!
                 NSDictionary *contentDict = message.ext[@"Content"];
                 NSDictionary *msgDict = contentDict[@"Msg"];
@@ -417,9 +426,8 @@ static NSString * const apnsCertName_Dis = @"自己上传到环信后台的推�
 -(void)_huanxinUserlogin
 {
     LLLog(@"🐳🐳🐳🐳🐳🐳🐳 -%s- 开始登录ing...",__func__);
-    
-    //FIXME:登录环信,登录帐号公司内部定义帐号是什么!!!
-    [LLPushLoginUtils ll_huanxinLoginWithName:@"zhangfei" password:@"111111" complete:^(NSString *aUsername, EMError *aError) {
+    #error 调试和实际项目中的环信IM用户的登录帐号, 需要替换成自己的. 环信的IM帐号和密码可以和用户唯一标识统一
+    [LLPushLoginUtils ll_huanxinLoginWithName:@"zhangsan" password:@"123456" complete:^(NSString *aUsername, EMError *aError) {
         if (!aError) {
             LLLog(@"🐳🐳🐳🐳🐳🐳🐳 -%s- 环信登陆成功",__func__);
             
@@ -504,6 +512,21 @@ static NSString * const apnsCertName_Dis = @"自己上传到环信后台的推�
     [self _huanxinUserlogin];
 }
 
+
+-(void)ll_huanxinUserloginSuccess:(ll_huanxinUserloginSuccess)success failure:(ll_huanxinUserloginFailure)failure
+{
+    [self _huanxinUserlogin];
+    self.myLoginSuccess = success;
+    self.myLoginFailure = failure;
+}
+
+
+-(void)ll_huanxinUserloginOutSuccess:(ll_huanxinUserloginOutSuccess)success failure:(ll_huanxinUserloginOutFailure)failure
+{
+    [self _huanxinUserloginOut];
+    self.myLoginOutSuccess = success;
+    self.myLoginOutFailure = failure;
+}
 
 
 

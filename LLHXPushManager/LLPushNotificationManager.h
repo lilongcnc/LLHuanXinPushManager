@@ -10,9 +10,14 @@
 #import <Foundation/Foundation.h>
 #import "LLPushNotificationUtils.h"
 #import "LLPushNotificationPrivate.h"
-
 @class CustomerTabBarController;
 
+
+typedef void (^ll_huanxinUserloginSuccess) ();
+typedef void (^ll_huanxinUserloginFailure) ();
+
+typedef void (^ll_huanxinUserloginOutSuccess) ();
+typedef void (^ll_huanxinUserloginOutFailure) ();
 @interface LLPushNotificationManager : NSObject
 
 @property (nonatomic,strong) CustomerTabBarController *customerBarVC;
@@ -35,9 +40,20 @@
 @property (nonatomic,assign) BOOL debugEnabled;
 
 
-//注册和登录接口已经内部处理,不推荐外部调用
--(void)ll_huanxinUserloginOut LLDeprecated("不推荐外部调用此方法,内部已经处理");
--(void)ll_huanxinUserlogin LLDeprecated("不推荐外部调用此方法,内部已经处理");
 
+/**
+ 在 app 退出登录的时候调用
+ */
+-(void)ll_huanxinUserloginOut;
+
+
+/**
+ 在 app 登录的时候调用
+ */
+-(void)ll_huanxinUserlogin;
+
+
+-(void)ll_huanxinUserloginSuccess:(ll_huanxinUserloginSuccess)success failure:(ll_huanxinUserloginFailure)failure;
+-(void)ll_huanxinUserloginOutSuccess:(ll_huanxinUserloginOutSuccess)success failure:(ll_huanxinUserloginOutFailure)failure;
 
 @end

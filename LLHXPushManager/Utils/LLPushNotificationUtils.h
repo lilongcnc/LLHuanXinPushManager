@@ -73,7 +73,12 @@ typedef void (^DidReceiveNotificationResponseBlock)(UNUserNotificationCenter *ce
 + (void)ll_didReceiveNotificationResponse:(DidReceiveNotificationResponseBlock)didReceiveNotificationResponseBlock;
 
 
-//tip:iOS7~iOS0的推送接收方法,在
+
+/**
+ 清空通知栏所有未展示的通知!
+ (如果在通知栏点击推送消息时候的响应方法`jumpToTransactionRecordHomeView`中调用此方法, 则剩余未点击的推送消息也将会全部消失)
+ */
++ (void)cleanLocalNotification;
 
 @end
 
